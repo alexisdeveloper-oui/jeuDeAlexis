@@ -1,0 +1,92 @@
+/****************************************************************
+		
+	Fichier :	
+	Description : Feuille de style globale CSS
+	Auteur : 	
+	Version (date) :  		
+	Couleurs : 		
+					
+****************************************************************/
+@font-face {
+	font-family: Roboto;
+	src: url("../font/Roboto-Regular.ttf");
+}
+
+body {
+	font-family: Roboto;
+	margin: 0;
+}
+
+.dropdown * {
+	background-color: black;
+	color: white;
+}
+
+
+.dropdown {
+	/* Border */
+	display: flex;
+
+	background-color: black;
+	color: white;
+
+
+	/* Reset list styles */
+	list-style-type: none;
+	margin: 0;
+	padding: .5%; 
+}
+
+.dropdown li {
+	/* Spacing */
+	padding: 8px;
+
+	/* Used to position the sub dropdown */
+	position: relative;
+	cursor: pointer;
+}
+
+/* The sub dropdown */
+.dropdown ul {
+	/* Border */
+	border: 1px solid rgba(0, 0, 0, 0.3);
+
+	/* Hidden by default */
+	display: none;
+
+	/* Absolute position */
+	left: 0;
+	position: absolute;
+	top: 100%;
+
+	/* Reset styles */
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	/* Width */
+	width: 200px;
+}
+
+/* The second level sub dropdown */
+.dropdown ul ul {
+	left: 100%;
+	position: absolute;
+	top: 0;
+}
+
+/* Change background color of list item when being hovered */
+.dropdown li:hover>div {
+	background-color: white;
+	color: black;
+}
+
+.dropdown li:hover {
+	background-color: white;
+	color: black;
+}
+
+/* Show the direct sub dropdown when hovering the list item */
+.dropdown li:hover>ul {
+	display: block;
+}
